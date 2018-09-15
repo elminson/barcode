@@ -4,7 +4,11 @@
     "type": "library",
     "keywords": ["barcode", "image"],
     "require": {
-        "phpunit/phpunit": "^7.4@dev"
+        "phpunit/phpunit": "^7.3",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-cache-bundle": "^1.2",
+        "doctrine/orm": "^2.5",
+        "doctrine/common": "^2.6"
     },
     "autoload": {
         "psr-4": {
