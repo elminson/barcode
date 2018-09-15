@@ -1,0 +1,27 @@
+{
+    "name": "elminson/barcode",
+    "description": "Generate barcode img",
+    "type": "library",
+    "keywords": ["barcode", "image"],
+    "require": {
+        "phpunit/phpunit": "^7.4@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elminson\\BarCode\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Elminson\\BarCode\\Tests\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elminson De Oleo Baez",
+            "email": "edeoleo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
