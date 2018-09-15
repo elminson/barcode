@@ -17,10 +17,12 @@ class BarCode
     protected $code_type = "code128";
     protected $print = false;
     protected $SizeFactor = 1;
+    protected $code_array = 'code128';
 
     public function __construct()
     {
-        $code_type = "code128";
+        $this->code_type = "code128";
+        $this->code_array = "code128";
         $this->setCode_type("code128");
     }
 
