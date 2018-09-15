@@ -107,7 +107,6 @@ class BarCode
             $this->text = strtoupper($this->text);
         }
 
-        //if (in_array(strtolower($code_type), array("code128", "code128b"))) {
         $chksum = (new CodeType)->getChecksum($this->getCode_type());
         // Must not change order of array elements as the checksum depends on the array's key to validate final code
         $code_array = (new CodeType)->getCode($this->getCode_type());
@@ -119,7 +118,9 @@ class BarCode
             $code_string .= $code_array[$activeKey];
             $chksum = ($chksum + ($code_values[$activeKey] * $X));
         }
-        $code_string .= $code_array[$code_keys[($chksum - (intval($chksum / 103) * 103))]];
+        if ($chksum != 0) {
+            $code_string .= $code_array[$code_keys[($chksum - (intval($chksum / 103) * 103))]];
+        }
 
         $code_string = "211214" . $code_string . "2331112";
 

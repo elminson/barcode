@@ -13,9 +13,9 @@ class CodeType
         'code128' => ['code' => 'code128', 'chksum' => 104],
         'code128b' => ['code' => 'code128b', 'chksum' => 104],
         'code128a' => ['code' => 'code128a', 'chksum' => 103],
-        'code39' => 'code39',
-        'code25' => 'code25',
-        'codabar' => 'codabar',
+        'code39' => ['code' => 'code39', 'chksum' => 0],
+        'code25'  => ['code' => 'code25', 'chksum' => 0],
+        'codabar'  => ['code' => 'codabar', 'chksum' => 0],
 
     ];
 
