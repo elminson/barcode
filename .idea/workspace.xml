@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="824d3640-5b14-47db-b62d-1f59e8003098" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BarCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BarCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestBarCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestBarCode.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,29 +20,29 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" lean-forward="true" selection-start-line="19" selection-end-line="22" />
+            <state relative-caret-position="255">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="187">
-                <caret line="38" column="19" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="19" />
+              <first_editor relative-caret-position="322">
+                <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestBarCode.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestBarCode.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/TestBarCode.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+              <caret line="89" column="35" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="35" />
               <folding>
                 <element signature="e#169#198#0#PHP" expanded="true" />
               </folding>
@@ -83,8 +80,8 @@
       <file leaf-file-name="BarCode.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BarCode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="386" column="48" selection-start-line="386" selection-start-column="48" selection-end-line="386" selection-end-column="48" />
+            <state relative-caret-position="87">
+              <caret line="369" column="34" selection-start-line="369" selection-start-column="20" selection-end-line="369" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -130,8 +127,8 @@
         <option value="$PROJECT_DIR$/src/ConfigCode.php" />
         <option value="$PROJECT_DIR$/src/BarCode.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/tests/TestBarCode.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -274,7 +271,7 @@
       <updated>1536989652975</updated>
       <workItem from="1536989654647" duration="3820000" />
       <workItem from="1536993852506" duration="29253000" />
-      <workItem from="1537059107770" duration="11390000" />
+      <workItem from="1537059107770" duration="11859000" />
     </task>
     <servers />
   </component>
@@ -311,7 +308,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44463000" />
+    <option name="totallyTimeSpent" value="44932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -446,37 +443,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestBarCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="89" column="35" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="35" />
+          <folding>
+            <element signature="e#169#198#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BarCode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="386" column="48" selection-start-line="386" selection-start-column="48" selection-end-line="386" selection-end-column="48" />
+        <state relative-caret-position="87">
+          <caret line="369" column="34" selection-start-line="369" selection-start-column="20" selection-end-line="369" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" lean-forward="true" selection-start-line="19" selection-end-line="22" />
+        <state relative-caret-position="255">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="187">
-            <caret line="38" column="19" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="19" />
+          <first_editor relative-caret-position="322">
+            <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestBarCode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
-          <folding>
-            <element signature="e#169#198#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

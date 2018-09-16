@@ -24,6 +24,8 @@ $barcode->setBgColor("#cccccc");
 $barcode->setFileName("test");
 $barcode->setFilepath(__DIR__."/temp/");
 $barcode->generate();
+$barcode->SaveBarcodeToDisk();
+$bardode->DestroyBarcode();
 ```
 ### Setters
 * setText => text to be converte to barcode
@@ -39,6 +41,7 @@ $barcode->generate();
 * SaveBarcodeToDisk => Save Barcode
 * GetPngData
 * DrawBarcodeToScreen
+* DestroyBarcode
 
 
 
