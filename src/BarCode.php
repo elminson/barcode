@@ -12,11 +12,11 @@ class BarCode
 {
     protected $filepath = "";
     protected $text = "0";
-    protected $size = "200";
+    protected $size = "20";
     protected $orientation = "horizontal";
     protected $code_type = "code128";
     protected $print = false;
-    protected $SizeFactor =1;
+    protected $SizeFactor = 3;
     protected $code_array = 'code128';
     protected $code_string;
 
@@ -112,7 +112,11 @@ class BarCode
         if ($this->getCode_type() == "code25") {
             $this->code_string = $this->barcode25();
         } else {
-            $this->code_string = $this->barcodebase();
+            if ($this->getCode_type() == "codabar") {
+                $this->code_string = $this->barcodabar();
+            } else {
+                $this->code_string = $this->barcodebase();
+            }
         }
         $this->generateBarCodeImage();
 
@@ -179,6 +183,27 @@ class BarCode
         return $this->prepareBarCode($code_string);
     }
 
+    private function barcodabar()
+    {
+        // Convert to uppercase
+        $upper_text = strtoupper($this->text);
+        $size = strlen($upper_text);
+        $code_array = $this->config_code->getCode($this->getCode_type());
+        $code_keys = array_keys($code_array);
+        $code_values = array_flip($code_keys);
+        $code_array_size = count($code_keys);
+        $code_string = "";
+        for ($X = 1; $X <= $size; $X++) {
+            for ($Y = 0; $Y < $code_array_size; $Y++) {
+                if (substr($upper_text, ($X - 1), 1) == $code_keys[$Y]) {
+                    $code_string .= $code_values[$Y] . "1";
+                }
+            }
+        }
+
+        return $this->prepareBarCode($code_string);
+    }
+
     private function barcodebase()
     {
         //code 25 and codebar are 0-9 and 0-9 A-D and some exclaamtion point
@@ -195,9 +220,7 @@ class BarCode
         // var_dump($this->getCode_type());
         //var_dump($this->config_code->getCodeString($this->getCode_type(), 'start'));
         //
-        echo "=============checksum start " . $this->getCode_type() . "=========================\n";
-        var_dump($chksum);
-        echo "=============checksum end=========================\n";
+
         $code_keys = array_keys($code_array);
         $code_values = array_flip($code_keys);
         $code_string = "";
