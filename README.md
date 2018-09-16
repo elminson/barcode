@@ -42,6 +42,9 @@ $barcode->generate();
 Code128
 ![Codabar](https://github.com/elminson/barcode/blob/master/temp/code128.png)
 
+Code128C
+![Codabar](https://github.com/elminson/barcode/blob/master/temp/code128c.png)
+
 Code128B
 ![Codabar](https://github.com/elminson/barcode/blob/master/temp/code128b.png)
 

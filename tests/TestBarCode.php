@@ -22,7 +22,7 @@ class TestBarCode extends TestCase
         $barcode->setBgColor("#FFFFFF");
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code128");
-        $barcode->generate("testing");
+        $barcode->generate();
         $this->assertEquals(__DIR__ . '\..\temp\\code128.png', $barcode->getFile());
 
     }
@@ -37,8 +37,23 @@ class TestBarCode extends TestCase
         $barcode->setBgColor("#FFFFFF");
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code128b");
-        $barcode->generate("testing");
+        $barcode->generate();
         $this->assertEquals(__DIR__ . '\..\temp\\code128b.png', $barcode->getFile());
+
+    }
+
+    public function testBarCode128C()
+    {
+        $barcode = new BarCode('code128c');
+        $barcode->setPrint(true);
+        $barcode->setText("8900939392");
+        $barcode->setSizeFactor(3);
+        $barcode->setTextColor("#000000");
+        $barcode->setBgColor("#FFFFFF");
+        $barcode->setFilepath(__DIR__ . '\..\temp\\');
+        $barcode->setFileName("code128c");
+        $barcode->generate();
+        $this->assertEquals(__DIR__ . '\..\temp\\code128c.png', $barcode->getFile());
 
     }
 

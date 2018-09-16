@@ -157,6 +157,11 @@ class BarCode
                     $this->code_string = $this->barcodabar();
                     break;
                 }
+            case "code128c":
+                {
+                    $this->code_string = $this->barcodebaseC();
+                    break;
+                }
             default:
                 $this->code_string = $this->barcodebase();
         }
@@ -225,6 +230,36 @@ class BarCode
                     $code_string .= $code_values[$Y] . "1";
                 }
             }
+        }
+
+        return $this->prepareBarCode($code_string);
+    }
+
+    private function barcodebaseC()
+    {
+        //Validate code is pair amount of characters
+        $chksum = $this->config_code->getChecksum($this->getCode_type());
+
+        // Must not change order of array elements as the checksum depends on the array's key to validate final code
+        $code_array = $this->config_code->getCode($this->getCode_type());
+
+        $code_keys = array_keys($code_array);
+        $code_values = array_flip($code_keys);
+
+        $code_string = "";
+
+        $code = preg_replace('/[^0-9]/', '', $this->text); // Code 128C supports numbers only
+        $size = strlen($code);
+        $i = 1;
+        for ($X = 1; $X <= $size; $X += 2) {
+            $activeKey = substr($code, ($X - 1), 2);
+            $code_string .= $code_array[$activeKey];
+            $chksum = ($chksum + ($code_values[$activeKey] * $i));
+            $i++;
+        }
+
+        if ($chksum != 0) {
+            $code_string .= $code_array[$code_keys[($chksum - (intval($chksum / 103) * 103))]];
         }
 
         return $this->prepareBarCode($code_string);
