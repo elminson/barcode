@@ -12,6 +12,7 @@ class BarCode
 {
     protected $filepath = "";
     protected $file_name = null;
+    protected $file = "";
     protected $text = "0";
     protected $size = "40";
     protected $orientation = "horizontal";
@@ -32,7 +33,6 @@ class BarCode
         //with try catch
         $this->code_type = $code;
         $this->code_array = $code;
-        $this->filepath = "tests/";
         $this->config_code = new ConfigCode();
         list($r, $g, $b) = sscanf($this->default_bg_color, "#%02x%02x%02x");
         $this->bg_color = ['r' => $r, 'g' => $g, 'b' => $b];
@@ -52,6 +52,10 @@ class BarCode
         $this->filepath = $filepath;
     }
 
+    public function getFile()
+    {
+        return $this->file;
+    }
     public function setFileName($filename)
     {
         $this->file_name = $filename;
@@ -138,6 +142,8 @@ class BarCode
         $this->setText($text);
         if ($this->getCode_type() == "code25") {
             $this->code_string = $this->barcode25();
+        } else   if ($this->getCode_type() == "code39") {
+            $this->code_string = $this->barcode39();
         } else {
             if ($this->getCode_type() == "codabar") {
                 $this->code_string = $this->barcodabar();
@@ -346,7 +352,9 @@ class BarCode
             if ($this->file_name != null) {
                 $name = $this->file_name;
             }
-            imagepng($image, $this->filepath . $name . ".png");
+
+         echo   $this->file = $this->filepath . $name . ".png";
+            imagepng($image, $this->file);
             imagedestroy($image);
         }
     }

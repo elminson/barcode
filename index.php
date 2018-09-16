@@ -14,6 +14,7 @@ $barcode->setPrint(true);
 $barcode->setTextColor("#ff9900");
 $barcode->setBgColor("#cccccc");
 $barcode->setFileName("test");
+$barcode->setFilepath("temp/");
 echo $barcode->generate("testing");
 echo "\n";
 //$barcode = new BarCode('code128b');

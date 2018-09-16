@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="824d3640-5b14-47db-b62d-1f59e8003098" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/TestBarCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php-barcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-barcode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barcode.php" beforeDir="false" afterPath="$PROJECT_DIR$/barcode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BarCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BarCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConfigCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/65839.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/825519.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestBarCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestBarCode.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,17 +16,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" executionDataType="PHAR" phpInterpreterId="b0b3c634-65df-45ce-aaa1-188c9b42e370" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" executionDataType="PHAR" phpInterpreterId="b0b3c634-65df-45ce-aaa1-188c9b42e370" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <pharPath>C:\composer\composer.phar</pharPath>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="136">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="170">
+                <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -38,11 +46,10 @@
       <file leaf-file-name="TestBarCode.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/TestBarCode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="155">
+              <caret line="91" column="37" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="37" />
               <folding>
-                <element signature="e#6#119#0#PHP" expanded="true" />
-                <element signature="e#118#147#0#PHP" expanded="true" />
+                <element signature="e#169#198#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,8 +58,8 @@
       <file leaf-file-name="barcode.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/barcode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1158">
-              <caret line="270" column="46" lean-forward="true" selection-start-line="269" selection-start-column="8" selection-end-line="270" selection-end-column="46" />
+            <state relative-caret-position="17">
+              <caret line="334" column="20" selection-start-line="334" selection-start-column="8" selection-end-line="334" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -75,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BarCode.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BarCode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BarCode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="119">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -97,9 +104,16 @@
       <find>code_data</find>
       <find>122121111</find>
       <find>$code_string</find>
-      <find>filepath</find>
       <find>code_data_array</find>
       <find>code25</find>
+      <find>#</find>
+      <find>255</find>
+      <find>text_color</find>
+      <find>$filepath</find>
+      <find>setFileName</find>
+      <find>$file_name</find>
+      <find>file_name</find>
+      <find>filepath</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,13 +123,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/phpbarcode/PhpBarcode.php" />
-        <option value="$PROJECT_DIR$/tests/TestBarCode.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/CodeType.php" />
         <option value="$PROJECT_DIR$/barcode.php" />
         <option value="$PROJECT_DIR$/src/ConfigCode.php" />
-        <option value="$PROJECT_DIR$/src/BarCode.php" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/tests/TestBarCode.php" />
+        <option value="$PROJECT_DIR$/src/BarCode.php" />
       </list>
     </option>
   </component>
@@ -200,7 +215,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,25 +222,11 @@
               <item name="barcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="barcode" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="barcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="barcode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="barcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="barcode" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="barcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="barcode" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,10 +255,10 @@
   </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner directory="$PROJECT_DIR$" />
+      <TestRunner directory="$PROJECT_DIR$/tests" />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner directory="$PROJECT_DIR$" />
+      <TestRunner directory="$PROJECT_DIR$/tests" />
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -272,59 +272,61 @@
       <option name="presentableId" value="Default" />
       <updated>1536989652975</updated>
       <workItem from="1536989654647" duration="3820000" />
-      <workItem from="1536993852506" duration="26800000" />
+      <workItem from="1536993852506" duration="29253000" />
+      <workItem from="1537059107770" duration="5578000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestBarCode - 2018.09.15 at 14h 30m 57s.xml">
-      <configuration name="TestBarCode" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 14h 32m 22s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 21h 32m 49s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 14h 43m 07s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 21h 52m 13s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 15h 43m 16s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 21h 59m 18s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 15h 43m 36s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 21h 59m 38s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 15h 45m 45s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 22h 05m 53s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 15h 46m 58s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 22h 07m 15s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 16h 05m 26s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 22h 07m 29s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 16h 09m 30s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 22h 09m 44s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.09.15 at 16h 12m 40s.xml">
+    <history-entry file="Unnamed - 2018.09.15 at 22h 10m 36s.xml">
+      <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Unnamed - 2018.09.15 at 22h 16m 17s.xml">
       <configuration name="Unnamed" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30620000" />
+    <option name="totallyTimeSpent" value="38651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15431164" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32838285" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32838285" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15658094" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -333,13 +335,67 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="323">
+            <caret line="19" column="68" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="68" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestBarCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <element signature="e#169#198#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5678">
+          <caret line="334" column="20" selection-start-line="334" selection-start-column="8" selection-end-line="334" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConfigCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4981">
+          <caret line="293" column="19" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BarCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3264">
+          <caret line="192" column="9" selection-start-line="192" selection-start-column="9" selection-end-line="192" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BarCode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
@@ -368,14 +424,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestBarCode.php">
+    <entry file="file://$PROJECT_DIR$/src/ConfigCode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#6#119#0#PHP" expanded="true" />
-            <element signature="e#118#147#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="69">
+          <caret line="293" column="19" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -386,31 +438,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConfigCode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="293" column="19" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1158">
-          <caret line="270" column="46" lean-forward="true" selection-start-line="269" selection-start-column="8" selection-end-line="270" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BarCode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="170">
+            <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="136">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="334" column="20" selection-start-line="334" selection-start-column="8" selection-end-line="334" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestBarCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="91" column="37" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="37" />
+          <folding>
+            <element signature="e#169#198#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BarCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
         </state>
       </provider>
     </entry>
