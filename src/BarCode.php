@@ -56,6 +56,7 @@ class BarCode
     {
         return $this->file;
     }
+
     public function setFileName($filename)
     {
         $this->file_name = $filename;
@@ -142,13 +143,15 @@ class BarCode
         $this->setText($text);
         if ($this->getCode_type() == "code25") {
             $this->code_string = $this->barcode25();
-        } else   if ($this->getCode_type() == "code39") {
-            $this->code_string = $this->barcode39();
         } else {
-            if ($this->getCode_type() == "codabar") {
-                $this->code_string = $this->barcodabar();
+            if ($this->getCode_type() == "code39") {
+                $this->code_string = $this->barcode39();
             } else {
-                $this->code_string = $this->barcodebase();
+                if ($this->getCode_type() == "codabar") {
+                    $this->code_string = $this->barcodabar();
+                } else {
+                    $this->code_string = $this->barcodebase();
+                }
             }
         }
         $this->generateBarCodeImage();
@@ -353,7 +356,7 @@ class BarCode
                 $name = $this->file_name;
             }
 
-         echo   $this->file = $this->filepath . $name . ".png";
+            $this->file = $this->filepath . $name . ".png";
             imagepng($image, $this->file);
             imagedestroy($image);
         }
