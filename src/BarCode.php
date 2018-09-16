@@ -171,8 +171,6 @@ class BarCode
         $code_array = $this->config_code->getCode($this->getCode_type());
         $code_keys = array_keys($code_array);
         $code_values = array_flip($code_keys);
-        //$code_array_keys = [];
-        //$code_array_values = []
 
         $code_array_size = count($code_keys);
         $code_string = "";
@@ -234,8 +232,6 @@ class BarCode
 
     private function barcodebase()
     {
-        //code 25 and codebar are 0-9 and 0-9 A-D and some exclaamtion point
-        //function to validate text.
 
         if ($this->code_type == 'code128a') {
             $this->text = strtoupper($this->text);
@@ -245,9 +241,6 @@ class BarCode
 
         // Must not change order of array elements as the checksum depends on the array's key to validate final code
         $code_array = $this->config_code->getCode($this->getCode_type());
-        // var_dump($this->getCode_type());
-        //var_dump($this->config_code->getCodeString($this->getCode_type(), 'start'));
-        //
 
         $code_keys = array_keys($code_array);
         $code_values = array_flip($code_keys);
