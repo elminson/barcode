@@ -11,11 +11,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $barcode = new BarCode('code128');
 $barcode->setPrint(true);
+$barcode->setText("testing");
 $barcode->setTextColor("#ff9900");
 $barcode->setBgColor("#cccccc");
 $barcode->setFileName("test");
 $barcode->setFilepath(__DIR__."/temp/");
-echo $barcode->generate("testing");
+echo $barcode->generate();
 //$barcode = new BarCode('code128b');
 //echo $barcode->generate("testing");
 //echo "\n";

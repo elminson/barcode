@@ -138,50 +138,30 @@ class BarCode
      * @param $text
      * @return mixed
      */
-    public function generate($text)
+    public function generate()
     {
-        $this->setText($text);
-        if ($this->getCode_type() == "code25") {
-            $this->code_string = $this->barcode25();
-        } else {
-            if ($this->getCode_type() == "code39") {
-                $this->code_string = $this->barcode39();
-            } else {
-                if ($this->getCode_type() == "codabar") {
-                    $this->code_string = $this->barcodabar();
-                } else {
-                    $this->code_string = $this->barcodebase();
+        $code_type = $this->getCode_type();
+        switch ($code_type) {
+            case "code25":
+                {
+                    $this->code_string = $this->barcode25();
+                    break;
                 }
-            }
+            case "code39":
+                {
+                    $this->code_string = $this->barcode39();
+                    break;
+                }
+            case "codabar":
+                {
+                    $this->code_string = $this->barcodabar();
+                    break;
+                }
+            default:
+                $this->code_string = $this->barcodebase();
         }
-        $this->generateBarCodeImage();
 
-//        switch ($this->code_type) {
-//            case CODE_128:
-//            case CODE_128_B:
-//            case CODE_128_A:
-//                {
-//                    $this->barcodebase();
-//                    break;
-//                }
-//            case CODE_39:
-//                {
-//                    break;
-//                }
-//            case CODE_25:
-//                {
-//                    break;
-//                }
-//            case CODEBAR:
-//                {
-//                    break;
-//                }
-//            default:
-//                {
-//                    $this->barcodebase();
-//                    break;
-//                }
-//        }
+        $this->generateBarCodeImage();
 
     }
 

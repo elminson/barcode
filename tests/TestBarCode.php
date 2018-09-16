@@ -16,6 +16,7 @@ class TestBarCode extends TestCase
     {
         $barcode = new BarCode('code128');
         $barcode->setPrint(true);
+        $barcode->setText("testing");
         $barcode->setSizeFactor(3);
         $barcode->setTextColor("#000000");
         $barcode->setBgColor("#FFFFFF");
@@ -30,6 +31,7 @@ class TestBarCode extends TestCase
     {
         $barcode = new BarCode('code128b');
         $barcode->setPrint(true);
+        $barcode->setText("testing");
         $barcode->setSizeFactor(3);
         $barcode->setTextColor("#000000");
         $barcode->setBgColor("#FFFFFF");
@@ -44,12 +46,13 @@ class TestBarCode extends TestCase
     {
         $barcode = new BarCode('code128a');
         $barcode->setPrint(true);
+        $barcode->setText("testing");
         $barcode->setSizeFactor(3);
         $barcode->setTextColor("#000000");
         $barcode->setBgColor("#FFFFFF");
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code128a");
-        $barcode->generate("testing");
+        $barcode->generate();
         $this->assertEquals(__DIR__ . '\..\temp\\code128a.png', $barcode->getFile());
 
     }
@@ -58,12 +61,13 @@ class TestBarCode extends TestCase
     {
         $barcode = new BarCode('code39');
         $barcode->setPrint(true);
+        $barcode->setText("12345678");
         $barcode->setSizeFactor(3);
         $barcode->setTextColor("#000000");
         $barcode->setBgColor("#FFFFFF");
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code39");
-        $barcode->generate("12345678");
+        $barcode->generate();
         $this->assertEquals(__DIR__ . '\..\temp\\code39.png', $barcode->getFile());
 
     }
@@ -72,12 +76,13 @@ class TestBarCode extends TestCase
     {
         $barcode = new BarCode('code25');
         $barcode->setPrint(true);
+        $barcode->setText("12345678");
         $barcode->setSizeFactor(3);
         $barcode->setTextColor("#000000");
         $barcode->setBgColor("#FFFFFF");
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code25");
-        $barcode->generate("12345678");
+        $barcode->generate();
         $this->assertEquals(__DIR__ . '\..\temp\\code25.png', $barcode->getFile());
 
     }
@@ -86,12 +91,13 @@ class TestBarCode extends TestCase
     {
         $barcode = new BarCode('codabar');
         $barcode->setPrint(true);
+        $barcode->setText("12345678");
         $barcode->setSizeFactor(3);
         $barcode->setTextColor("#000000");
         $barcode->setBgColor("#FFFFFF");
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("codabar");
-        $barcode->generate("12345678");
+        $barcode->generate();
         $this->assertEquals(__DIR__ . '\..\temp\\codabar.png', $barcode->getFile());
 
     }
