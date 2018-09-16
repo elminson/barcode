@@ -25,6 +25,7 @@ class BarCode
     protected $bg_color;
     protected $default_text_color = '#000000';
     protected $default_bg_color = '#FFFFFF';
+    protected $image;
 
 
     public function __construct($code = 'code128')
@@ -352,21 +353,47 @@ class BarCode
             }
             $location = $cur_size;
         }
+        $this->image = $image;
+    }
 
-        // Draw barcode to the screen or save in a file
+    /**
+     * @param $image
+     */
+    public function DrawBarcodeToScreen()
+    {
+        // Draw barcode to the screen
+
+        header('Content-type: image/png');
+        imagepng($this->image);
+    }
+
+    public function DestroyBarcode(){
+        if ($this->image) {
+            imagedestroy($this->image);
+        }
+    }
+
+    public function SaveBarcodeToDisk()
+    {
         if ($this->filepath == "") {
             header('Content-type: image/png');
-            imagepng($image);
-            imagedestroy($image);
+            imagepng($this->image);
         } else {
             $name = rand(1000, 999999);
             if ($this->file_name != null) {
                 $name = $this->file_name;
             }
-
             $this->file = $this->filepath . $name . ".png";
-            imagepng($image, $this->file);
-            imagedestroy($image);
+            imagepng($this->image, $this->file);
         }
     }
+
+    public function GetPngData()
+    {
+        ob_start();
+        imagepng($this->image);
+        imagedestroy($this->image);
+        return ob_get_clean();
+    }
+
 }

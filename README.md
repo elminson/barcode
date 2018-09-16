@@ -36,6 +36,10 @@ $barcode->generate();
 * setCode_type
 * setSizeFactor
 * setSize => Set text font size 
+* SaveBarcodeToDisk => Save Barcode
+* GetPngData
+* DrawBarcodeToScreen
+
 
 
 ### Examples

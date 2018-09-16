@@ -23,6 +23,7 @@ class TestBarCode extends TestCase
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code128");
         $barcode->generate();
+        $barcode->SaveBarcodeToDisk();
         $this->assertEquals(__DIR__ . '\..\temp\\code128.png', $barcode->getFile());
 
     }
@@ -38,6 +39,7 @@ class TestBarCode extends TestCase
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code128b");
         $barcode->generate();
+        $barcode->SaveBarcodeToDisk();
         $this->assertEquals(__DIR__ . '\..\temp\\code128b.png', $barcode->getFile());
 
     }
@@ -53,6 +55,7 @@ class TestBarCode extends TestCase
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code128c");
         $barcode->generate();
+        $barcode->SaveBarcodeToDisk();
         $this->assertEquals(__DIR__ . '\..\temp\\code128c.png', $barcode->getFile());
 
     }
@@ -68,6 +71,7 @@ class TestBarCode extends TestCase
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code128a");
         $barcode->generate();
+        $barcode->SaveBarcodeToDisk();
         $this->assertEquals(__DIR__ . '\..\temp\\code128a.png', $barcode->getFile());
 
     }
@@ -83,6 +87,7 @@ class TestBarCode extends TestCase
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code39");
         $barcode->generate();
+        $barcode->SaveBarcodeToDisk();
         $this->assertEquals(__DIR__ . '\..\temp\\code39.png', $barcode->getFile());
 
     }
@@ -98,6 +103,7 @@ class TestBarCode extends TestCase
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("code25");
         $barcode->generate();
+        $barcode->SaveBarcodeToDisk();
         $this->assertEquals(__DIR__ . '\..\temp\\code25.png', $barcode->getFile());
 
     }
@@ -113,6 +119,7 @@ class TestBarCode extends TestCase
         $barcode->setFilepath(__DIR__ . '\..\temp\\');
         $barcode->setFileName("codabar");
         $barcode->generate();
+        $barcode->SaveBarcodeToDisk();
         $this->assertEquals(__DIR__ . '\..\temp\\codabar.png', $barcode->getFile());
 
     }

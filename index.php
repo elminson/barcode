@@ -16,20 +16,7 @@ $barcode->setTextColor("#ff9900");
 $barcode->setBgColor("#cccccc");
 $barcode->setFileName("test");
 $barcode->setFilepath(__DIR__."/temp/");
-echo $barcode->generate();
-//$barcode = new BarCode('code128b');
-//echo $barcode->generate("testing");
-//echo "\n";
-//$barcode = new BarCode('code128a');
-//echo $barcode->generate("testing");
-//echo "\n";
-//$barcode = new BarCode('code39');
-//echo $barcode->generate("2323");
-//echo "\n";
-//$barcode = new BarCode('code25');
-//echo $barcode->generate("9410243919234");
-//echo "\n";
-//$barcode = new BarCode('codabar');
-//echo $barcode->generate("2323");
-
-
+$barcode->generate();
+$barcode->SaveBarcodeToDisk();
+$barcode->GetPngData();
+$barcode->DrawBarcodeToScreen();
