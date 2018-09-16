@@ -1,3 +1,19 @@
+#BarCode
+####Basic use:
+```php
+require_once(__DIR__ . '/vendor/autoload.php');
+$barcode = new BarCode('code128');
+$barcode->setPrint(true);
+$barcode->setTextColor("#ff9900");
+$barcode->setBgColor("#cccccc");
+$barcode->setFileName = "test";
+echo $barcode->generate("testing");
+```
+
+
+
+
+````
 php-barcode
 ===========
 
@@ -15,3 +31,4 @@ Usage:
 
 Result:
 <img alt="testing" src="http://davidscotttufts.com/code/barcode.php?text=testing" />
+```

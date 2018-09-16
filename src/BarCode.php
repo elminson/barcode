@@ -11,14 +11,20 @@ namespace Elminson\BarCode;
 class BarCode
 {
     protected $filepath = "";
+    protected $file_name = null;
     protected $text = "0";
-    protected $size = "20";
+    protected $size = "40";
     protected $orientation = "horizontal";
     protected $code_type = "code128";
-    protected $print = false;
-    protected $SizeFactor = 3;
+    protected $print = true;
+    protected $SizeFactor = 1;
     protected $code_array = 'code128';
     protected $code_string;
+    protected $text_color;
+    protected $bg_color;
+    protected $default_text_color = '#000000';
+    protected $default_bg_color = '#FFFFFF';
+
 
     public function __construct($code = 'code128')
     {
@@ -28,7 +34,12 @@ class BarCode
         $this->code_array = $code;
         $this->filepath = "tests/";
         $this->config_code = new ConfigCode();
-        //$this->setCode_type($code);
+        list($r, $g, $b) = sscanf($this->default_bg_color, "#%02x%02x%02x");
+        $this->bg_color = ['r' => $r, 'g' => $g, 'b' => $b];
+        list($r, $g, $b) = sscanf($this->default_text_color, "#%02x%02x%02x");
+        $this->text_color = ['r' => $r, 'g' => $g, 'b' => $b];
+
+
     }
 
     public function getFilepath()
@@ -39,6 +50,11 @@ class BarCode
     public function setFilepath($filepath)
     {
         $this->filepath = $filepath;
+    }
+
+    public function setFileName($filename)
+    {
+        $this->file_name = $filename;
     }
 
     public function getText()
@@ -91,6 +107,18 @@ class BarCode
         $this->print = $print;
     }
 
+    public function setTextColor($color)
+    {
+        list($r, $g, $b) = sscanf($color, "#%02x%02x%02x");
+        $this->text_color = ['r' => $r, 'g' => $g, 'b' => $b];
+    }
+
+    public function setBgColor($color)
+    {
+        list($r, $g, $b) = sscanf($color, "#%02x%02x%02x");
+        $this->bg_color = ['r' => $r, 'g' => $g, 'b' => $b];
+    }
+
     public function getSizeFactor()
     {
         return $this->SizeFactor;
@@ -100,7 +128,6 @@ class BarCode
     {
         $this->SizeFactor = $SizeFactor;
     }
-
 
     /**
      * @param $text
@@ -183,6 +210,18 @@ class BarCode
         return $this->prepareBarCode($code_string);
     }
 
+    public function barcode39()
+    {
+        $upper_text = strtoupper($this->text);
+        $size = strlen($upper_text);
+        $code_array = $this->config_code->getCode($this->getCode_type());
+        $code_string = "";
+        for ($X = 1; $X <= $size; $X++) {
+            $code_string .= $code_array[substr($upper_text, ($X - 1), 1)] . "1";
+        }
+        return $this->prepareBarCode($code_string);
+    }
+
     private function barcodabar()
     {
         // Convert to uppercase
@@ -223,8 +262,9 @@ class BarCode
 
         $code_keys = array_keys($code_array);
         $code_values = array_flip($code_keys);
+        $size = strlen($this->text);
         $code_string = "";
-        for ($X = 1; $X <= strlen($this->text); $X++) {
+        for ($X = 1; $X <= $size; $X++) {
             $activeKey = substr($this->text, ($X - 1), 1);
             $code_string .= $code_array[$activeKey];
             $chksum = ($chksum + ($code_values[$activeKey] * $X));
@@ -257,8 +297,9 @@ class BarCode
         } else {
             $text_height = 0;
         }
+        $code_string_len = strlen($this->code_string);
 
-        for ($i = 1; $i <= strlen($this->code_string); $i++) {
+        for ($i = 1; $i <= $code_string_len; $i++) {
             $code_length = $code_length + (integer)(substr($this->code_string, ($i - 1), 1));
         }
 
@@ -271,8 +312,8 @@ class BarCode
         }
 
         $image = imagecreate($img_width, $img_height + $text_height);
-        $black = imagecolorallocate($image, 0, 0, 0);
-        $white = imagecolorallocate($image, 255, 255, 255);
+        $black = imagecolorallocate($image, $this->text_color["r"], $this->text_color["g"], $this->text_color["b"]);
+        $white = imagecolorallocate($image, $this->bg_color['r'], $this->bg_color['g'], $this->bg_color['b']);
 
         //Add the text to the bottom barcode
         imagefill($image, 0, 0, $white);
@@ -281,7 +322,7 @@ class BarCode
         }
 
         $location = 10;
-        for ($position = 1; $position <= strlen($this->code_string); $position++) {
+        for ($position = 1; $position <= $code_string_len; $position++) {
             $cur_size = $location + (substr($this->code_string, ($position - 1), 1));
             if (strtolower($this->orientation) == "horizontal") {
                 imagefilledrectangle($image, $location * $this->SizeFactor, 0, $cur_size * $this->SizeFactor,
@@ -301,7 +342,11 @@ class BarCode
             imagepng($image);
             imagedestroy($image);
         } else {
-            imagepng($image, $this->filepath . rand(1000, 999999) . ".png");
+            $name = rand(1000, 999999);
+            if ($this->file_name != null) {
+                $name = $this->file_name;
+            }
+            imagepng($image, $this->filepath . $name . ".png");
             imagedestroy($image);
         }
     }
