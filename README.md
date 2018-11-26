@@ -18,6 +18,7 @@ namespace Elminson\BarCode;
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $barcode = new BarCode('code128');
+$barcode->setText("Testing");
 $barcode->setPrint(true);
 $barcode->setTextColor("#ff9900");
 $barcode->setBgColor("#cccccc");
